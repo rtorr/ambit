@@ -8,20 +8,21 @@ small (2.29 KB) "safe" program interfaces for JavaScript. Yes, safe is in quotes
 yarn add sides
 ```
 
+some program or code to create an interface for
 ```javascript
 import { registerInterface } from 'sides';
 import PropTypes from 'prop-types';
 
-let state = 0;
-function updateState(n) {
-  state = state += n ? n.number : 1;
-  return state;
+let count = 0;
+function countSomeStuff(n) {
+  count = count += n ? n.number : 1;
+  return count;
 }
 
 const unregister = registerInterface(
   {
     name: 'program1',
-    program: updateState,
+    program: countSomeStuff,
     types: { number: PropTypes.number.isRequired },
     description: 'this is a test program'
   },
@@ -29,7 +30,7 @@ const unregister = registerInterface(
 );
 ```
 
-some other place to use this program
+some other place to interface with that program
 
 ```javascript
 import sides from 'sides';
