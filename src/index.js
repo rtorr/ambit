@@ -27,7 +27,7 @@ export function registerInterface(program, PropTypes) {
   }
   try {
     if (PropTypes) {
-      PropTypes.checkPropTypes(programType, program, 'prop', 'ambit registerInterface');
+      PropTypes.checkPropTypes(programType, program, 'prop', 'sides registerInterface');
     }
     if (!programs[program.name]) {
       programs[program.name] = {

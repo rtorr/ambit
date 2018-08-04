@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import PropTypes from 'prop-types';
-import ambit, { registerInterface, programs } from './index';
+import sides, { registerInterface, programs } from './index';
 
 let state = 0;
 let unregister;
@@ -35,7 +35,7 @@ test('registerInterface', () => {
   expect(programs['program1']).toBe(undefined);
 });
 
-test('ambit', () => {
+test('sides', () => {
   unregister = registerInterface(
     {
       name: 'program1',
@@ -45,12 +45,12 @@ test('ambit', () => {
     },
     PropTypes
   );
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
   expect(state).toBe(12);
 });
 
@@ -64,11 +64,11 @@ test('wrong types', () => {
     },
     PropTypes
   );
-  ambit('program1', { number: '1' });
-  ambit('program1', { number: false });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
-  ambit('program1', { number: 2 });
+  sides('program1', { number: '1' });
+  sides('program1', { number: false });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
+  sides('program1', { number: 2 });
   expect(state).toBe('01false2222');
 });

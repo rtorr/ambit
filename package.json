@@ -1,5 +1,5 @@
 {
-  "name": "ambit",
+  "name": "sides",
   "version": "0.0.1",
   "main": "dist/index.js",
   "author": {
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rtorr/ambit.git"
+    "url": "git@github.com:rtorr/sides.git"
   },
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist; parcel build --global ambit src/index.js",
+    "build": "rm -rf dist; parcel build --global sides src/index.js",
     "precommit": "lint-staged",
     "prepublish": "npm run build",
     "start": "parcel index.html",
