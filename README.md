@@ -1,6 +1,6 @@
 # sides
 
-A small (2.29 KB) "safe" program interfaces for JavaScript. Yes, safe is in quotes.
+small (2.29 KB) "safe" program interfaces for JavaScript. Yes, safe is in quotes.
 
 ## Use
 
@@ -9,7 +9,7 @@ yarn add sides
 ```
 
 ```javascript
-import { registerInterface, programs } from 'sides';
+import { registerInterface } from 'sides';
 import PropTypes from 'prop-types';
 
 let state = 0;
